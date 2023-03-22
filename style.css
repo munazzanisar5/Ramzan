@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+
+}
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    position: relative;
+    z-index: 2;
+    color: #053356;
+    padding-top: 4rem;
+}
+.left_img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.right_img img{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.my_name{
+    color: #053356;
+    text-align: center;
+    font-size: 3rem;
+    position: relative;
+    z-index: 2;
+    top: 4rem;
+}
+/* .my_name h2{
+    font-family: 'Moon Dance';
+    font-weight: bolder;
+
+} */
+.center_img{
+    position: relative;
+  
+    /* left: 31rem; */
+    z-index: 3;
+   
+}
+.center_img img{
+    width: 100%;
+}
+.center_img{
+    display: flex;
+}
+.center_img span{
+    position: relative;
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #053356;
+    margin: 0 4px;
+    border-radius: 6rem;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(140s / var(--i));
+    /* animation-duration: ; */
+    /* box-shadow: 0 0 0 10px #021829, 0 0 50px #040d14, 0 0 100px #142029; */
+}
+
+.center_img span:nth-child(even){
+    /* background-color: #90B3DF; */
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(-10vh) scale(1);
+    }
+    100%{
+        transform: translateY(100vh) scale(0);
+    }
+
+}
+.ramza_img{
+    position: relative;
+    z-index: 2;
+    top: 2rem;
+    width: 24rem;
+    margin: 0 auto;
+}
+.ramza_img img{
+    width: 100%;
+}
+
+/* .sound{
+    visibility: hidden;
+} */
+
+
+
+
+
+
+@media screen and (max-width:576px){
+    h2{
+        font-size: 2rem;
+    }
+    .left_img img{
+        width: 100%;
+    }
+    .left_img img{
+       display: none;
+    }
+    .right_img img{
+        display: none;
+     }
+    .ramza_img{
+        top: 2rem;
+        width: 100%;
+        padding: 0 2rem;
+    }
+    .center_img span{
+        border-radius: 8rem;
+        width: 2rem;
+        height: 0.2rem;
+    }
+    .center_img span.hide{
+        display: none;
+    }
+}
